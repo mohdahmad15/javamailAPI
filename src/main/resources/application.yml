@@ -1,0 +1,30 @@
+server:
+  port: 8093
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/microServices
+    username: root
+    password: ahmad#321
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  
+  # JPA configuration
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: mohdsidi83@gmail.com
+    password: zswc kapz joom zskr
+    protocol: smtp
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+      mail.smtp.ssl.trust: smtp.gmail.com
