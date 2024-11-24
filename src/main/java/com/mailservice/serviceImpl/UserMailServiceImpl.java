@@ -30,9 +30,11 @@ public class UserMailServiceImpl implements UserMailService {
             }
 
             UserEntityCl createdUser = clRepository.save(entityCl);
-
-            mailService.sendEmail("ahmad436334@gmail.com", "New user created",
-                    "A new user is created with Id: " + createdUser.getId() + " and name: " + createdUser.getName());
+			/*
+			 * mailService.sendEmail("ahmad436334@gmail.com", "New user created",
+			 * "A new user is created with Id: " + createdUser.getId() + " and name: " +
+			 * createdUser.getName());
+			 */
 
             return createdUser;
         } catch (Exception e) {
@@ -49,9 +51,10 @@ public class UserMailServiceImpl implements UserMailService {
 
             entityCl.setId(id);
             UserEntityCl updatedUser = clRepository.save(entityCl);
-
-            mailService.sendEmail("ahmad436334@gmail.com", "User updated",
-                    "User with Id: " + updatedUser.getId() + " has been updated.");
+			/*
+			 * mailService.sendEmail("ahmad436334@gmail.com", "User updated",
+			 * "User with Id: " + updatedUser.getId() + " has been updated.");
+			 */
 
             return updatedUser;
         } catch (Exception e) {
@@ -68,8 +71,10 @@ public class UserMailServiceImpl implements UserMailService {
 
             clRepository.deleteById(id);
 
-            mailService.sendEmail("ahmad436334@gmail.com", "User deleted",
-                    "User with ID: " + id + " has been deleted.");
+			/*
+			 * mailService.sendEmail("ahmad436334@gmail.com", "User deleted",
+			 * "User with ID: " + id + " has been deleted.");
+			 */
         } catch (Exception e) {
             throw new UserServiceException("Error occurred while deleting user: " + e.getMessage(), e);
         }
